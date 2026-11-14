@@ -1,0 +1,40 @@
+name: 开发任务
+description: 记录开发目标、验收标准、依赖和风险
+body:
+  - type: textarea
+    id: scope
+    attributes:
+      label: 目标与范围
+      description: 写清对产品的价值、计划修改的模块以及本轮范围。
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准
+      description: 写清可实际验证的结果及验证方式。
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 依赖与并行限制
+      description: 列出依赖的 Issue 及共享模块。没有则填无。
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: 风险
+      options:
+        - 低
+        - 中
+        - 高
+    validations:
+      required: true
+  - type: textarea
+    id: risk-reason
+    attributes:
+      label: 风险原因与审查重点
+    validations:
+      required: true
